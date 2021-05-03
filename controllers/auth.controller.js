@@ -57,6 +57,8 @@ module.exports.signIn = async (req, res) => {
   res.cookie("jwt", token, {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day in ms
+    secure:req.headers["x-forwarded-proto"] === "https",
+    sameSite: "none",
   });
 
   //   on envoi en réponse le message
