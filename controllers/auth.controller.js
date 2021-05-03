@@ -55,7 +55,7 @@ module.exports.signIn = async (req, res) => {
   // on crée un token
   const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
   res.cookie("jwt", token, {
-    // httpOnly: true,
+    httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day in ms
     secure:req.headers["x-forwarded-proto"] === "https",
     sameSite: "none",
