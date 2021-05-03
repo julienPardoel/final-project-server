@@ -19,6 +19,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 app.use(cookieParser());
+app.set('trust proxy', 1);
 
 const corsOptions = {
   origin:["https://playandcom.herokuapp.com","http://playandcom.herokuapp.com"],
