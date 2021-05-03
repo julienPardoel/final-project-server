@@ -21,7 +21,7 @@ const app = express();
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL,
+  origin:["https://playandcom.herokuapp.com/home","http://playandcom.herokuapp.com/home"],
   credentials: true,
   'allowedHeaders': ['sessionId', 'Content-Type'],
   'exposedHeaders': ['sessionId'],
