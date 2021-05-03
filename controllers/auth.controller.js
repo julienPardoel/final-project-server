@@ -58,7 +58,7 @@ module.exports.signIn = async (req, res) => {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day in ms
     secure:req.headers["x-forwarded-proto"] === "https",
-    SameSite: Lax,
+    SameSite: "none",
     // domain: ".herokuapp.com"
   });
 
