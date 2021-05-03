@@ -23,10 +23,10 @@ app.use(cookieParser());
 const corsOptions = {
   origin:["https://playandcom.herokuapp.com/","http://playandcom.herokuapp.com/"],
   credentials: true,
-  'allowedHeaders': ['sessionId', 'Content-Type'],
-  'exposedHeaders': ['sessionId'],
-  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  'preflightContinue': false
+  allowedHeaders: ['sessionId', 'Content-Type'],
+  exposedHeaders: ['sessionId'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false
 }
 
 app.use(cors(corsOptions));
